@@ -1,0 +1,42 @@
+% preamble.tex
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm, amsfonts} % 强大的数学包
+\usepackage{geometry} % 页面设置
+\geometry{a4paper, margin=1in}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% --- 定义计数器 ---
+\newcounter{problemcount}[chapter] % 每个章节重新计数
+\renewcommand{\theproblemcount}{\thechapter.\arabic{problemcount}}
+
+% --- 定义 Problem 环境 ---
+% 使用 tcolorbox 可以让题目看起来更像教材风格，也可以简单用 list
+\newenvironment{problem}[1][]{
+    \refstepcounter{problemcount}
+    \par\addvspace{1.5ex}
+    \noindent\textbf{Problem \theproblemcount} \textit{#1} \par
+    \smallskip
+    \itshape % 题目内容使用斜体区分
+}{
+    \par\medskip
+}
+
+% --- 定义 Solution 环境 ---
+\newenvironment{solution}{
+    \par\noindent
+    \textbf{Solution:}
+    \smallskip
+    \normalfont % 解答恢复正体
+}{
+    \par\vspace{2ex}
+    \rule{\textwidth}{0.1pt} % 每个题目后面加一条细线分隔
+}
+
+% --- 物理常用的符号简写 (针对 Kardar 风格) ---
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\avg}[1]{\langle #1 \rangle}
+\newcommand{\kb}{k_B}
+\newcommand{\partder}[2]{\frac{\partial #1}{\partial #2}}
