@@ -1,0 +1,125 @@
+\chapter{Statistical fields}
+
+\begin{problem}
+    \textit{Cubic invariants}: When the order parameter $m$ goes to zero discontinuously, the phase transition is said to be first order (discontinuous). A common example occurs in systems where symmetry considerations do not exclude a cubic term in the Landau free energy, as in
+    \[
+        \mathcal{H} = \int d^dx \left[\frac{K}{2}(\nabla m)^2 + \frac{t}{2}m^2 + cm^3 + um^4\right],
+        \quad K,c,u > 0.
+    \]
+
+    \begin{enumerate}
+        \item[(a)] By plotting the energy density $\mathcal{H}(m)$ for uniform $m$ at various values of $t$, show that as $t$ is reduced there is a discontinuous jump to $m \neq 0$ for a positive $t$ in the saddle point approximation.
+
+        \item[(b)] By writing down the two conditions that $m$ and $t$ must satisfy at the transition, solve for $m$ and $t$.
+
+        \item[(c)] Note that the correlation length $\xi$ is related to the curvature of $\mathcal{H}(m)$ at its minimum by $K\xi^{-2} = \partial^2\mathcal{H}/\partial m^2\big|_{m_{\rm eq}}$. Plot $\xi$ as a function of $t$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Tricritical point}: By tuning an additional parameter, a second-order transition can be made first order. The special point separating the two types of transitions is known as a tricritical point, and can be studied by examining the Landau--Ginzburg Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla m)^2 + \frac{t}{2}m^2 + um^4 + vm^6 - hm\right],
+    \]
+    where $u$ can be positive or negative. For $u < 0$, a positive $v$ is necessary to ensure stability.
+
+    \begin{enumerate}
+        \item[(a)] By sketching the energy density $\mathcal{H}(m)$ for various $t$, show that in the saddle point approximation there is a first-order transition for $u < 0$ and $h = 0$.
+
+        \item[(b)] Calculate $t$ and the discontinuity $\Delta m$ at this transition.
+
+        \item[(c)] For $h = 0$ and $v > 0$, plot the phase boundary in the $(u,t)$ plane, identifying the phases, and order of the phase transitions.
+
+        \item[(d)] The special point $u = t = 0$, separating first and second-order phase boundaries, is a tricritical point. For $u = 0$, calculate the tricritical exponents $\alpha$, $\beta$, $\gamma$, and $\delta$, governing the singularities in magnetization, susceptibility, and heat capacity. (Recall: $C \propto t^{-\alpha}$; $m|_{h=0} \propto t^\beta$; $\chi \propto t^{-\gamma}$; and $m|_{t=0} \propto h^{1/\delta}$.)
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Transverse susceptibility}: An $n$-component magnetization field $\vec{m}(\vec{x})$ is coupled to an external field $\vec{h}$ through a term $-\int d^dx\,\vec{h}\cdot\vec{m}(\vec{x})$ in the Hamiltonian $\mathcal{H}$. If $\mathcal{H}$ for $\vec{h} = 0$ is invariant under rotations of $\vec{m}(\vec{x})$; then the free energy density ($f = -\ln Z/V$) only depends on the absolute value of $\vec{h}$; i.e.\ $f(\vec{h}) = f(h)$, where $h = |\vec{h}|$.
+
+    \begin{enumerate}
+        \item[(a)] Show that $\vec{m} = \langle\int d^dx\,\vec{m}(\vec{x})/V\rangle = -h\,f'(h)/h$.
+
+        \item[(b)] Relate the susceptibility tensor $\chi_{\alpha\beta} = \partial m_\alpha/\partial h_\beta$, to $f''(h)$, $\vec{m}$, and $\vec{h}$.
+
+        \item[(c)] Show that the transverse and longitudinal susceptibilities are given by $\chi_t = m/h$ and $\chi_\ell = -f''(h)$, where $m$ is the magnitude of $\vec{m}$.
+
+        \item[(d)] Conclude that $\chi_t$ diverges as $\vec{h} \to 0$, whenever there is a spontaneous magnetization. Is there any similar a priori reason for $\chi_\ell$ to diverge?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Superfluid He$^4$--He$^3$ mixtures}: The superfluid He$^4$ order parameter is a complex number $\psi(\vec{x})$. In the presence of a concentration $c(\vec{x})$ of He$^3$ impurities, the system has the following Landau--Ginzburg energy
+    \[
+        \mathcal{H}[c,\psi] = \int d^dx\left[\frac{K}{2}|\nabla\psi|^2 + \frac{t}{2}|\psi|^2 + u|\psi|^4 + v|\psi|^6 + \frac{\alpha}{2}(c(\vec{x}) - \bar{c})^2 + \gamma(c(\vec{x}) - \bar{c})|\psi|^2\right],
+    \]
+    with positive $K$, $u$, and $v$.
+
+    \begin{enumerate}
+        \item[(a)] Integrate out the He$^3$ concentrations to find the effective Hamiltonian $\mathcal{H}_{\rm eff}[\psi]$ for the superfluid order parameter, given by
+        \[
+            Z = \int \mathcal{D}\psi\,e^{-\mathcal{H}_{\rm eff}[\psi]} \equiv \int \mathcal{D}c\,\mathcal{D}\psi\,e^{-\mathcal{H}[c,\psi]}.
+        \]
+
+        \item[(b)] Obtain the phase diagram for $\mathcal{H}_{\rm eff}$ using a saddle point approximation. Find the limiting value of $\gamma^*$ above which the phase transition becomes discontinuous.
+
+        \item[(c)] The discontinuous transition is accompanied by a jump in the magnitude of $\psi$. How does this jump vanish as $\gamma \to \gamma^*$?
+
+        \item[(d)] Show that the discontinuous transition is accompanied by a jump in He$^3$ concentration.
+
+        \item[(e)] Sketch the phase boundary in the $(t,\gamma)$ coordinates, and indicate how its two segments join at $\gamma^*$.
+
+        \item[(f)] Going back to the original joint probability for the fields $c(\vec{x})$ and $\psi(\vec{x})$, show that $\langle c(\vec{x}) - \bar{c}\rangle = -(\gamma/\alpha)|\psi(\vec{x})|^2$.
+
+        \item[(g)] Show that $\langle c(\vec{x})c(\vec{y})\rangle = \bar{c}^2 + (\gamma^2/\alpha^2)\langle|\psi(\vec{x})|^2|\psi(\vec{y})|^2\rangle$, for $\vec{x} \neq \vec{y}$.
+
+        \item[(h)] Qualitatively discuss how $\langle c(\vec{x})c(\vec{0})\rangle$ decays with $x = |\vec{x}|$ in the disordered phase.
+
+        \item[(i)] Qualitatively discuss how $\langle c(\vec{x})c(\vec{0})\rangle$ decays to its asymptotic value in the ordered phase.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Crumpled surfaces}: The configurations of a crumpled sheet of paper can be described by a vector field $\vec{r}(\vec{x})$, denoting the position in three-dimensional space, $\vec{r} = (r_1, r_2, r_3)$, of the point at location $\vec{x} = (x_1, x_2)$ on the flat sheet. The energy of each configuration is assumed to be invariant under translations and rotations of the sheet of paper.
+
+    \begin{enumerate}
+        \item[(a)] Show that the two lowest-order (in derivatives) terms in the quadratic part of a Landau--Ginzburg Hamiltonian for this system are:
+        \[
+            \mathcal{H}_0[\vec{r}] = \sum_{\alpha=1,2}\int d^2x\left[\frac{t}{2}(\partial_\alpha\vec{r})\cdot(\partial_\alpha\vec{r}) + \frac{K}{2}(\nabla^2\vec{r})\cdot(\nabla^2\vec{r})\right].
+        \]
+
+        \item[(b)] Write down the lowest-order terms (there are two) that appear at the quartic level.
+
+        \item[(c)] Discuss what happens when $t$ changes sign, assuming that quartic terms provide the required stability (and $K > 0$).
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

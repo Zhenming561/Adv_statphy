@@ -1,0 +1,352 @@
+\chapter{Series expansions}
+
+\begin{problem}
+    \textit{Continuous spins}: In the standard $n\sigma$ model, $n$-component unit vectors are placed on the sites of a lattice. The nearest-neighbor spins are then connected by a bond $J\vec{s}_i\cdot\vec{s}_j$. In fact, if we are only interested in universal properties, any generalized interaction $f(\vec{s}_i\cdot\vec{s}_j)$ leads to the same critical behavior. By analogy with the Ising model, a suitable choice is
+    \[
+        \exp\bigl(f(\vec{s}_i\cdot\vec{s}_j)\bigr) = 1 + nt\,\vec{s}_i\cdot\vec{s}_j,
+    \]
+    resulting in the so-called loop model.
+
+    \begin{enumerate}
+        \item[(a)] Construct a high-temperature expansion of the loop model (for the partition function $Z$) in the parameter $t$, on a two-dimensional hexagonal (honeycomb) lattice.
+
+        \item[(b)] Show that the limit $n \to 0$ describes the configurations of a single self-avoiding polymer on the lattice.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Potts model I}: Consider Potts spins $s_i = 1, 2, \ldots, q$, interacting via the Hamiltonian $-\beta\mathcal{H} = K\sum_{\langle ij\rangle}\delta_{s_i s_j}$.
+
+    \begin{enumerate}
+        \item[(a)] To treat this problem graphically at high temperatures, the Boltzmann weight for each bond is written as
+        \[
+            \exp(K\delta_{s_i s_j}) = C(K)\bigl[1 + T(K)\,g(s_i, s_j)\bigr],
+        \]
+        with $g(s, s') = q\delta_{ss'} - 1$. Find $C(K)$ and $T(K)$.
+
+        \item[(b)] Show that
+        \[
+            \sum_{s=1}^q g(s, s') = 0, \quad \sum_{s=1}^q g(s_1, s)g(s, s_2) = q\,g(s_1, s_2), \quad \text{and} \quad \sum_{s,s'}g(s,s')g(s',s) = q^2(q-1).
+        \]
+
+        \item[(c)] Use the above results to calculate the free energy, and the correlation function $\langle g(s_m, s_n)\rangle$ for a one-dimensional chain.
+
+        \item[(d)] Calculate the partition function on the square lattice to order of $T^4$. Also calculate the first term in the low-temperature expansion of this problem.
+
+        \item[(e)] By comparing the first terms in low- and high-temperature series, find a duality rule for Potts models. Assuming a single transition temperature, find the value of $K_c(q)$.
+
+        \item[(f)] How do the higher-order terms in the high-temperature series for the Potts model differ from those of the Ising model? What is the fundamental difference that sets apart the graphs for $q = 2$? (This is ultimately the reason why only the Ising model is solvable.)
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Potts model II}: An alternative expansion is obtained by starting with
+    \[
+        \exp(K\delta_{s_i s_j}) = 1 + v(K)\,\delta_{s_i s_j},
+    \]
+    where $v(K) = e^K - 1$. In this case, the sum over spins does not remove any graphs, and all choices of distributing bonds at random on the lattice are acceptable.
+
+    \begin{enumerate}
+        \item[(a)] Including a magnetic field $h\sum_i\delta_{s_i, 1}$, show that the partition function takes the form
+        \[
+            Z(q, K, h) = \sum_{\text{all graphs}}\prod_{\text{clusters } c \text{ in graph}}\left[v^{n_b^c}\times\bigl(q - 1 + e^{hn_s^c}\bigr)\right],
+        \]
+        where $n_b^c$ and $n_s^c$ are the numbers of bonds and sites in cluster $c$. This is known as the random cluster expansion.
+
+        \item[(b)] Show that the limit $q \to 1$ describes a percolation problem, in which bonds are randomly distributed on the lattice with probability $p = v/(v+1)$. What is the percolation threshold on the square lattice?
+
+        \item[(c)] Show that in the limit $q \to 0$, only a single connected cluster contributes to leading order. The enumeration of all such clusters is known as listing branched lattice animals.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Ising model in a field}: Consider the partition function for the Ising model ($\sigma_i = \pm 1$) on a square lattice, in a magnetic field $h$; i.e.
+    \[
+        Z = \sum_{\{\sigma_i\}}\exp\!\left(K\sum_{\langle ij\rangle}\sigma_i\sigma_j + h\sum_i\sigma_i\right).
+    \]
+
+    \begin{enumerate}
+        \item[(a)] Find the general behavior of the terms in a low-temperature expansion for $Z$.
+
+        \item[(b)] Think of a model whose high-temperature series reproduces the generic behavior found in (a); and hence obtain the Hamiltonian, and interactions of the dual model.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Potts duality}: Consider Potts spins $s_i = 1, 2, \ldots, q$, placed on the sites of a square lattice of $N$ sites, interacting with their nearest-neighbors through a Hamiltonian $-\beta\mathcal{H} = K\sum_{\langle ij\rangle}\delta_{s_i s_j}$.
+
+    \begin{enumerate}
+        \item[(a)] By comparing the first terms of high and low temperature series, or by any other method, show that the partition function has the property
+        \[
+            Z(K) = q e^{2NK}\mathcal{F}(e^{-K}) = q^{-N}\bigl(e^K + q - 1\bigr)^{2N}\mathcal{F}\!\left(\frac{e^K - 1}{e^K + q - 1}\right),
+        \]
+        for some function $\mathcal{F}$, and hence locate the critical point $K_c(q)$.
+
+        \item[(b)] Starting from the duality expression for $Z(K)$, derive a similar relation for the internal energy $U(K) = \langle\mathcal{H}\rangle = -\partial\ln Z/\partial(\ln K)$. Use this to calculate the exact value of $U$ at the critical point.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Anisotropic random walks}: Consider the ensemble of all random walks on a square lattice starting at the origin $(0,0)$. Each walk has a weight of $t_x^{\ell_x}\times t_y^{\ell_y}$, where $\ell_x$ and $\ell_y$ are the number of steps taken along the $x$ and $y$ directions, respectively.
+
+    \begin{enumerate}
+        \item[(a)] Calculate the total weight $W(x,y)$ of all walks terminating at $(x,y)$. Show that $W$ is well defined only for $t = (t_x + t_y)/2 < t_c = 1/4$.
+
+        \item[(b)] What is the shape of a curve $W(x,y) = \text{constant}$, for large $x$ and $y$, and close to the transition?
+
+        \item[(c)] How does the average number of steps $\langle\ell\rangle = \langle\ell_x + \ell_y\rangle$ diverge as $t$ approaches $t_c$?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Anisotropic Ising model}: Consider the anisotropic Ising model on a square lattice with a Hamiltonian
+    \[
+        -\beta\mathcal{H} = \sum_{x,y}\bigl[K_x\,\sigma_{x,y}\sigma_{x+1,y} + K_y\,\sigma_{x,y}\sigma_{x,y+1}\bigr],
+    \]
+    i.e.\ with bonds of different strengths along the $x$ and $y$ directions.
+
+    \begin{enumerate}
+        \item[(a)] By following the method presented in the text, calculate the free energy for this model. You do not have to write down every step of the derivation. Just sketch the steps that need to be modified due to anisotropy; and calculate the final answer for $\ln Z/N$.
+
+        \item[(b)] Find the critical boundary in the $(K_x, K_y)$ plane from the singularity of the free energy. Show that it coincides with the condition $K_x = \tilde{K}_y$, where $\tilde{K}$ indicates the standard dual interaction to $K$.
+
+        \item[(c)] Find the singular part of $\ln Z/N$, and comment on how anisotropy affects critical behavior in the exponent and amplitude ratios.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{M\"{u}ller--Hartmann and Zittartz estimate of the interfacial energy of the $d=2$ Ising model on a square lattice}:
+
+    \begin{enumerate}
+        \item[(a)] Consider an interface on the square lattice with periodic boundary conditions in one direction. Ignoring islands and overhangs, the configurations can be labelled by heights $h_n$ for $1 \leq n \leq L$. Show that for an anisotropic Ising model of interactions $K_x$, $K_y$, the energy of an interface along the $x$-direction is
+        \[
+            -\beta\mathcal{H} = -2K_y L - 2K_x\sum_n|h_{n+1} - h_n|.
+        \]
+
+        \item[(b)] Write down a column-to-column transfer matrix $\langle h|T|h'\rangle$, and diagonalize it.
+
+        \item[(c)] Obtain the interface free energy using the result in (b), or by any other method.
+
+        \item[(d)] Find the condition between $K_x$ and $K_y$ for which the interfacial free energy vanishes. Does this correspond to the critical boundary of the original 2d Ising model as computed in the previous problem?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Anisotropic Landau theory}: Consider an $n$-component magnetization field $\vec{m}(\vec{x})$ in $d$ dimensions.
+
+    \begin{enumerate}
+        \item[(a)] Using the previous problems on anisotropy as a guide, generalize the standard Landau--Ginzburg Hamiltonian to include the effects of spatial anisotropy.
+
+        \item[(b)] Are such anisotropies ``relevant''?
+
+        \item[(c)] In La$_2$CuO$_4$, the Cu atoms are arranged on the sites of a square lattice in planes, and the planes are then stacked together. Each Cu atom carries a ``spin'', which we assume to be classical, and can point along any direction in space. There is a very strong antiferromagnetic interaction in each plane. There is also a very weak interplane interaction that prefers to align successive layers. Sketch the low-temperature magnetic phase, and indicate to what universality class the order--disorder transition belongs.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Energy by duality}: Consider the Ising model ($\sigma_i = \pm 1$) on a square lattice with $-\beta\mathcal{H} = K\sum_{\langle ij\rangle}\sigma_i\sigma_j$.
+
+    \begin{enumerate}
+        \item[(a)] Starting from the duality expression for the free energy, derive a similar relation for the internal energy $U(K) = \langle\mathcal{H}\rangle = -\partial\ln Z/\partial(\ln K)$.
+
+        \item[(b)] Using (a), calculate the exact value of $U$ at the critical point $K_c$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Clock model duality}: Consider spins $s_i = 1, 2, \ldots, q$ placed on the sites of a square lattice, interacting via the clock model Hamiltonian $\mathcal{H}_C = -\sum_{\langle ij\rangle}J(s_i - s_j \bmod q)$.
+
+    \begin{enumerate}
+        \item[(a)] Change from the $N$ site variables to the $2N$ bond variables $b_{ij} = s_i - s_j$. Show that the difference in the number of variables can be accounted for by the constraint that around each plaquette (elementary square) the sum of the four bond variables must be zero modulus $q$.
+
+        \item[(b)] The constraints can be implemented by adding ``delta-functions''
+        \[
+            \delta\!\left(\sum_{\text{plaq}} S_p \bmod q\right) = \frac{1}{q}\sum_{n_p=1}^{q}\exp\!\left(\frac{2\pi i n_p S_p}{q}\right)
+        \]
+        for each plaquette. Show that after summing over the bond variables, the partition function can be written in terms of the dual variables, as
+        \[
+            Z = q^{-N}\sum_{\{n_p\}}\prod_{\langle pp'\rangle}\tilde{\lambda}(n_p - n_{p'}) \equiv \sum_{\{n_p\}}\exp\!\left[\sum_{\langle pp'\rangle}\tilde{J}(n_p - n_{p'})\right],
+        \]
+        where $\tilde{\lambda}(k)$ is the discrete Fourier transform of $e^{J(n)}$.
+
+        \item[(c)] Calculate the dual interaction parameter of a Potts model, and hence locate the critical point $J_c(q)$.
+
+        \item[(d)] Construct the dual of the anisotropic Potts model, with
+        \[
+            -\beta\mathcal{H} = \sum_{x,y}\bigl[J_x\,\delta_{s_{x,y},s_{x+1,y}} + J_y\,\delta_{s_{x,y},s_{x,y+1}}\bigr],
+        \]
+        i.e.\ with bonds of different strengths along the $x$ and $y$ directions. Find the line of self-dual interactions in the plane $(J_x, J_y)$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Triangular/hexagonal lattices}: For any planar network of bonds, one can define a geometrical dual by connecting the centers of neighboring plaquettes. Each bond of the dual lattice crosses a bond of the original lattice, allowing for a local mapping. Clearly, the dual of a triangular lattice is a hexagonal (or honeycomb) lattice, and vice versa.
+
+    \begin{enumerate}
+        \item[(a)] Starting from a Potts model with nearest-neighbor interaction $J$ on the triangular lattice, find the interaction parameter $J_h(J)$ of the dual hexagonal lattice.
+
+        \item[(b)] Note that the hexagonal lattice is bipartite, i.e.\ can be separated into two sublattices. In the partition function, do a partial sum over all spins in one sublattice. Show that the remaining spins form a triangular lattice with nearest-neighbor interactions $\tilde{J}(J)$, and a three-spin interaction $\tilde{J}_3(J)$. (This is called the star--triangle transformation.) Why is $\tilde{J}_3$ absent in the Ising model?
+
+        \item[(c)] Clearly, the model is not self-dual due to the additional interaction. Nonetheless, obtain the critical value such that $\tilde{J}(J_c) = J_c$.
+
+        \item[(d)] Check that $\tilde{J}_3(J_c) = 0$, i.e.\ while the model in general is not self-dual, it is self-dual right at criticality, leading to the exact value of $J_c(q)$!
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Cubic lattice}: The geometric concept of duality can be extended to general dimensions $d$. However, the dual of a geometric element of dimension $D$ is an entity of dimension $d - D$. For example, the dual of a bond ($D = 1$) in $d = 3$ is a plaquette ($D = 2$), as demonstrated in this problem.
+
+    \begin{enumerate}
+        \item[(a)] Consider a clock model on a cubic lattice of $N$ points. Change to the $3N$ bond variables $b_{ij} = s_i - s_j$. Show that there are now $2N$ constraints associated with the plaquettes of this lattice.
+
+        \item[(b)] Implement the constraints through discrete delta-functions by associating an auxiliary variable $n_p$ with each plaquette. It is useful to imagine $n_p$ as defined on a bond of the dual lattice, perpendicular to the plaquette $p$.
+
+        \item[(c)] By summing over the bond variables in $Z$, obtain the dual Hamiltonian
+        \[
+            \tilde{\mathcal{H}} = \sum_p \tilde{J}\!\left(n_{12}^p - n_{23}^p + n_{34}^p - n_{41}^p\right),
+        \]
+        where the sum is over all plaquettes $p$ of the dual lattice, with $\{n_{ij}^p\}$ indicating the four bonds around plaquette $p$.
+
+        \item[(d)] Note that $\tilde{\mathcal{H}}$ is left invariant if all the six bonds going out of any site are simultaneously increased by the same integer. Thus unlike the original model which only had a global translation symmetry, the dual model has a local, i.e.\ gauge symmetry.
+
+        \item[(e)] Consider a Potts gauge theory defined on the plaquettes of a four-dimensional hypercubic lattice. Find its critical coupling $J_c(q)$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\section*{Percolation}
+
+\begin{problem}
+    \textit{Cayley trees}: Consider a hierarchical lattice in which each site at one level is connected to $z$ sites at the level below. Thus the $n$th level of the tree has $z^n$ sites.
+
+    \begin{enumerate}
+        \item[(a)] For $z = 2$, obtain a recursion relation for the probability $P_n(p)$ that the top site of a tree of $n$ levels is connected to some site at the bottom level.
+
+        \item[(b)] Find the limiting behavior of $P_\infty(p)$ for infinitely many levels, and give the exponent $\beta$ for this tree.
+
+        \item[(c)] In a mean-field approximation, $P_\infty(p)$ for a lattice of coordination number $z$ is calculated self-consistently, in a manner similar to the above. Give the mean-field estimates for $p_c$ and the exponent $\beta$.
+
+        \item[(d)] The one-dimensional chain corresponds to $z = 1$. Find the probability that endpoints of an open chain of $N + 1$ sites are connected, and hence deduce the correlation length $\xi$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Duality in percolation}: Duality has a very natural interpretation in percolation: if a bond is occupied, its dual is empty, and vice versa. Thus the occupation probability for dual bonds is $\tilde{p} = 1 - p \equiv q$.
+
+    \begin{enumerate}
+        \item[(a)] The dual of a chain in which $N$ bonds are connected in series has $N$ bonds connected in parallel. What is the corresponding (non-)percolation probability?
+
+        \item[(b)] The bond percolation problem on a square lattice is self-dual. What is its threshold $p_c$?
+
+        \item[(c)] Bond percolation in three dimensions is dual to plaquette percolation. This is why in $d = 3$ it is possible to percolate while maintaining solid integrity.
+
+        \item[(d)] The triangular and hexagonal lattices are dual to each other. Combined with the star--triangle transformation that also maps the two lattices, this leads to exact values of $p_c$ for these lattices. However, this calculation is not trivial, and it is best to follow the steps for calculations of the critical couplings of $q$-state Potts models in an earlier problem.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Position-space renormalization group (PSRG)}: In the Migdal--Kadanoff approximation, a decimation is performed after bonds are moved to connect the remaining sites in a one-dimensional geometry. For a PSRG rescaling factor $b$ on a $d$-dimensional hypercubic lattice, the retained sites are connected by $b^{d-1}$ strands in parallel, each strand having $b$ bonds in series.
+
+    \begin{enumerate}
+        \item[(a)] Apply the above scheme to $b = d = 2$, and compare the resulting estimates of $p_c$ and $y_t = 1/\nu$ to the exact values for the square lattice ($p_c = 1/2$ and $y_t = 3/4$).
+
+        \item[(b)] Find the limiting values of $p_c$ and $y_t$ for large $d$. (It can be shown that $\nu = 1/2$ exactly, above an upper critical dimension $d_u = 6$.)
+
+        \item[(c)] In an alternative PSRG scheme, first $b^{d-1}$ bonds are connected in parallel, the resulting groups are then joined in series. Repeat the above calculations with this scheme.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

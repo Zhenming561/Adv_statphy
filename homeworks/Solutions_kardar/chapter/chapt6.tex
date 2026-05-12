@@ -1,0 +1,258 @@
+\chapter{Lattice systems}
+
+\begin{problem}
+    \textit{Cumulant method}: Apply the Niemeijer--van Leeuwen first-order cumulant expansion to the Ising model on a square lattice with $-\beta\mathcal{H} = K\sum_{\langle ij\rangle}\sigma_i\sigma_j$, by following these steps:
+
+    \begin{enumerate}
+        \item[(a)] For an RG with $b = 2$, divide the bonds into intracell components $\mathcal{H}_0$, and intercell components $\mathcal{U}$.
+
+        \item[(b)] For each cell $\alpha$, define a renormalized spin $\sigma'_\alpha = \text{sign}(\sigma_1^\alpha + \sigma_2^\alpha + \sigma_3^\alpha + \sigma_4^\alpha)$. This choice becomes ambiguous for configurations such that $\sum_{i=1}^4\sigma_i^\alpha = 0$. Distribute the weight of these configurations equally between $\sigma'_\alpha = +1$ and $-1$ (i.e.\ put a factor of $1/2$ in addition to the Boltzmann weight). Make a table for all possible configurations of a cell, the internal probability $\exp(-\beta\mathcal{H}_0)$, and the weights contributing to $\sigma'_\alpha = \pm 1$.
+
+        \item[(c)] Express $\langle\mathcal{U}\rangle_0$ in terms of the cell spins $\sigma'_\alpha$, and hence obtain the recursion relation $K'(K)$.
+
+        \item[(d)] Find the fixed point $K^*$, and the thermal eigenvalue $y_t$.
+
+        \item[(e)] In the presence of a small magnetic field $h\sum_i\sigma_i$, find the recursion relation for $h$, and calculate the magnetic eigenvalue $y_h$ at the fixed point.
+
+        \item[(f)] Compare $K^*$, $y_t$, and $y_h$ to their exact values.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Migdal--Kadanoff method}: Consider Potts spins $s_i = 1, 2, \ldots, q$, on sites $i$ of a hypercubic lattice, interacting with their nearest neighbors via a Hamiltonian
+    \[
+        -\beta\mathcal{H} = K\sum_{\langle ij\rangle}\delta_{s_i s_j}.
+    \]
+
+    \begin{enumerate}
+        \item[(a)] In $d = 1$ find the exact recursion relations by a $b = 2$ renormalization/decimation process. Identify all fixed points and note their stability.
+
+        \item[(b)] Write down the recursion relation $K'(K)$ in $d$-dimensions for $b = 2$, using the Migdal--Kadanoff bond moving scheme.
+
+        \item[(c)] By considering the stability of the fixed points at zero and infinite coupling, prove the existence of a non-trivial fixed point at finite $K^*$ for $d > 1$.
+
+        \item[(d)] For $d = 2$, obtain $K^*$ and $y_t$, for $q = 3$, $1$, and $0$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The Potts model}: The transfer matrix procedure can be extended to the Potts models, where the spin $s_i$ on each site takes $q$ values $s_i = 1, 2, \ldots, q$; and the Hamiltonian is $-\beta\mathcal{H} = K\sum_{i=1}^{N}\delta_{s_i s_{i+1}} + K\delta_{s_N s_1}$.
+
+    \begin{enumerate}
+        \item[(a)] Write down the transfer matrix and diagonalize it. Note that you do not have to solve a $q$th order secular equation as it is easy to guess the eigenvectors from the symmetry of the matrix.
+
+        \item[(b)] Calculate the free energy per site.
+
+        \item[(c)] Give the expression for the correlation length $\xi$ (you don't need to provide a detailed derivation), and discuss its behavior as $T = 1/K \to 0$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The spin-1 model}: Consider a linear chain where the spin $s_i$ at each site takes on three values $s_i = -1, 0, +1$. The spins interact via a Hamiltonian
+    \[
+        -\beta\mathcal{H} = K\sum_i s_i s_{i+1}.
+    \]
+
+    \begin{enumerate}
+        \item[(a)] Write down the transfer matrix $\langle s|T|s'\rangle = e^{Kss'}$ explicitly.
+
+        \item[(b)] Use symmetry properties to find the largest eigenvalue of $T$ and hence obtain the expression for the free energy per site $(\ln Z/N)$.
+
+        \item[(c)] Obtain the expression for the correlation length $\xi$, and note its behavior as $K \to \infty$.
+
+        \item[(d)] If we try to perform a renormalization group by decimation on the above chain we find that additional interactions are generated. Write down the simplest generalization of $-\beta\mathcal{H}$ whose parameter space is closed under such RG.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Clock model}: Each site of the lattice is occupied by a $q$-valued spin $s_i \equiv 1, 2, \ldots, q$, with an underlying translational symmetry modulus $q$, i.e.\ the system is invariant under $s_i \to s_i + n \pmod{q}$. The most general Hamiltonian subject to this symmetry with nearest-neighbor interactions is
+    \[
+        \mathcal{H}_C = -\sum_{\langle ij\rangle} J(s_i - s_j \bmod q),
+    \]
+    where $J(n)$ is any function, e.g.\ $J(n) = J\cos(2\pi n/q)$. Potts models are a special case of clock models with full permutation symmetry, and the Ising model is obtained in the limit of $q = 2$.
+
+    \begin{enumerate}
+        \item[(a)] For a closed linear chain of $N$ clock spins subject to the above Hamiltonian, show that the partition function $Z = \text{tr}\exp(-\beta\mathcal{H}_C)$ can be written as
+        \[
+            Z = \text{tr}\bigl[T(s_1, s_2) T(s_2, s_3)\cdots T(s_N, s_1)\bigr],
+        \]
+        where $T \equiv \langle s_i|T|s_j\rangle = \exp(J(s_i - s_j))$ is a $q\times q$ transfer matrix.
+
+        \item[(b)] Write down the transfer matrix explicitly and diagonalize it. Note that because of the translational symmetry, the eigenvalues are easily obtained by discrete Fourier transformation as
+        \[
+            \lambda_k = \sum_{n=1}^{q}\exp\!\left(J(n) + \frac{2\pi i n k}{q}\right).
+        \]
+
+        \item[(c)] Show that $Z = \sum_{k=1}^q \lambda_k^N \approx \lambda_0^N$ for $N \to \infty$. Write down the expression for the free energy per site $f = -\ln Z/N$.
+
+        \item[(d)] Show that the correlation function can be calculated from
+        \[
+            \langle s_i s_{i+\ell}\rangle = \frac{1}{Z}\sum_\alpha \text{tr}\bigl[P_\alpha T^\ell T^{N-\ell}\bigr],
+        \]
+        where $P_\alpha$ is a projection matrix. Hence show that $\langle s_i s_{i+\ell}\rangle_c \sim (\lambda_1/\lambda_0)^\ell$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{XY model}: Consider two-component unit spins $\vec{s}_i = (\cos\theta_i, \sin\theta_i)$ in one dimension, with the nearest-neighbor interactions described by $-\beta\mathcal{H} = K\sum_{i=1}^N\vec{s}_i\cdot\vec{s}_{i+1}$.
+
+    \begin{enumerate}
+        \item[(a)] Write down the transfer matrix $T'$, and show that it can be diagonalized with eigenvectors $f_m \propto e^{im\theta}$ for integer $m$.
+
+        \item[(b)] Calculate the free energy per site, and comment on the behavior of the heat capacity as $T \propto K^{-1} \to 0$.
+
+        \item[(c)] Find the correlation length $\xi$, and note its behavior as $K \to \infty$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{One-dimensional gas}: The transfer matrix method can also be applied to a one-dimensional gas of particles with short-range interactions, as described in this problem.
+
+    \begin{enumerate}
+        \item[(a)] Show that for a potential with a hard core that screens the interactions from further neighbors, the Hamiltonian for $N$ particles can be written as
+        \[
+            \mathcal{H} = \sum_{i=1}^N\frac{p_i^2}{2m} + \sum_{i=2}^N V(x_i - x_{i-1}).
+        \]
+        The (indistinguishable) particles are labeled with coordinates $x_i$ such that $0 \leq x_1 \leq x_2 \leq \cdots \leq x_N \leq L$, where $L$ is the length of the box confining the particles.
+
+        \item[(b)] Write the expression for the partition function $Z(T,N,L)$. Change variables to $\xi_1 = x_1$, $\xi_2 = x_2 - x_1$, $\ldots$, $\xi_N = x_N - x_{N-1}$, and carefully indicate the allowed ranges of integration and the constraints.
+
+        \item[(c)] Consider the Gibbs partition function obtained from the Laplace transformation
+        \[
+            \mathcal{Z}(T,N,P) = \int_0^\infty dL\,e^{-\beta PL}\,Z(T,N,L),
+        \]
+        and by extremizing the integrand find the standard formula for $P$ in the canonical ensemble.
+
+        \item[(d)] Change variables from $L$ to $\xi_{N+1} = L - \sum_{i=1}^N\xi_i$, and find the expression for $\mathcal{Z}(T,N,P)$ as a product over one-dimensional integrals over each $\xi_i$.
+
+        \item[(e)] At a fixed pressure $P$, find expressions for the mean length $\langle L\rangle(T,N,P)$, and the density $n = N/\langle L\rangle(T,N,P)$ (involving ratios of integrals which should be easy to interpret).
+
+        \item[(f)] For a hard sphere gas, with minimum separation $a$ between particles, calculate the equation of state $P(T,n)$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Potts chain (RG)}: Consider a one-dimensional array of $N$ Potts spins $s_i = 1, 2, \ldots, q$, subject to the Hamiltonian $-\beta\mathcal{H} = J\sum_i\delta_{s_i s_{i+1}}$.
+
+    \begin{enumerate}
+        \item[(a)] Using the transfer matrix method (or otherwise) calculate the partition function $Z$, and the correlation length $\xi$.
+
+        \item[(b)] Is the system critical at zero temperature for antiferromagnetic couplings $J < 0$?
+
+        \item[(c)] Construct a renormalization group (RG) treatment by eliminating every other spin. Write down the recursion relations for the coupling $J$, and the additive constant $g$.
+
+        \item[(d)] Discuss the fixed points, and their stability.
+
+        \item[(e)] Write the expression for $\ln Z$ in terms of the additive constants of successive rescalings.
+
+        \item[(f)] Show that the recursion relations are simplified when written in terms of $t(J) \equiv e^{-1/J}$.
+
+        \item[(g)] Use the result in (f) to express the series in (e) in terms of $t$. Show that the answer can be reduced to that obtained in part (a), upon using the result
+        \[
+            \sum_{n=0}^{\infty}\frac{1}{2^{n+1}}\ln\frac{1+t^{2^n}}{1-t^{2^n}} = -\ln(1-t).
+        \]
+
+        \item[(h)] Repeat the RG calculation of part (c), when a small symmetry breaking term $h\sum_i\delta_{s_i, 1}$ is added to $-\beta\mathcal{H}$. You will find that an additional coupling term $K\sum_i\delta_{s_i, 1}\delta_{s_{i+1}, 1}$ is generated under RG. Calculate the recursion relations in the three parameter space $(J, K, h)$.
+
+        \item[(i)] Find the magnetic eigenvalues at the zero temperature fixed point where $J \to \infty$, and obtain the form of the correlation length close to zero temperature.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Cluster RG}: Consider Ising spins on a hexagonal lattice with nearest-neighbor interactions $J$.
+
+    \begin{enumerate}
+        \item[(a)] Group the sites into clusters of four in preparation for a position space renormalization group with $b = 2$.
+
+        \item[(b)] How can the majority rule be modified to define the renormalized spin of each cluster?
+
+        \item[(c)] For a scheme in which the central site is chosen as the tie-breaker, make a table of all possible configurations of site-spins for a given value of the cluster-spin.
+
+        \item[(d)] Focus on a pair of neighboring clusters. Indicate the contributions of intracluster and intercluster bonds to the total energy.
+
+        \item[(e)] Show that in zero magnetic field, the Boltzmann weights of parallel and anti-parallel clusters are given by
+        \begin{align*}
+            R_{++} &= x^8 + 2x^6 + 7x^4 + 14x^2 + 17 + 14x^{-2} + 7x^{-4} + 2x^{-6}, \\
+            R_{+-} &= 9x^4 + 16x^2 + 13 + 16x^{-2} + 9x^{-4} + x^{-8},
+        \end{align*}
+        where $x = e^J$.
+
+        \item[(f)] Find the expression for the resulting recursion relation $J'(J)$.
+
+        \item[(g)] Estimate the critical ferromagnetic coupling $J_c$, and the exponent $\nu$ obtained from this RG scheme, and compare with the exact values.
+
+        \item[(h)] What are the values of the magnetic and thermal exponents $y_h$, $y_t$ at the zero temperature ferromagnetic fixed point?
+
+        \item[(i)] Is the above scheme also applicable for antiferromagnetic interactions? What symmetry of the original problem is not respected by this transformation?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Transition probability matrix}: Consider a system of two Ising spins with a coupling $K$, which can thus be in one of four states.
+
+    \begin{enumerate}
+        \item[(a)] Explicitly write the $4\times 4$ transition matrix corresponding to single spin flips for a Metropolis algorithm. Verify that the equilibrium weights are indeed a left eigenvector of this matrix.
+
+        \item[(b)] Repeat the above exercise if both single spin and double spin flips are allowed. The two types of moves are chosen randomly with probabilities $p$ and $q = 1 - p$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

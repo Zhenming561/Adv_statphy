@@ -1,0 +1,257 @@
+\chapter{Fluctuations}
+
+\begin{problem}
+    \textit{Spin waves}: In the XY model of $n=2$ magnetism, a unit vector $\vec{s} = (s_x, s_y)$ (with $s_x^2 + s_y^2 = 1$) is placed on each site of a $d$-dimensional lattice. There is an interaction that tends to keep nearest-neighbors parallel, i.e.\ a Hamiltonian
+    \[
+        -\beta\mathcal{H} = K\sum_{\langle ij\rangle}\vec{s}_i\cdot\vec{s}_j.
+    \]
+    The notation $\langle ij\rangle$ is conventionally used to indicate summing over all nearest-neighbor pairs $ij$.
+
+    \begin{enumerate}
+        \item[(a)] Rewrite the partition function $Z = \int\prod_i d\vec{s}_i\,\exp(-\beta\mathcal{H})$, as an integral over the set of angles $\theta_i$ between the spins $\vec{s}_i$ and some arbitrary axis.
+
+        \item[(b)] At low temperatures ($K \gg 1$), the angles $\theta_i$ vary slowly from site to site. In this case expand $-\beta\mathcal{H}$ to get a quadratic form in $\theta_i$.
+
+        \item[(c)] For $d = 1$, consider $L$ sites with periodic boundary conditions (i.e.\ forming a closed chain). Find the normal modes $\theta_q$ that diagonalize the quadratic form (by Fourier transformation), and the corresponding eigenvalues $K_q$. Pay careful attention to whether the modes are real or complex, and to the allowed values of $q$.
+
+        \item[(d)] Generalize the results from the previous part to a $d$-dimensional simple cubic lattice with periodic boundary conditions.
+
+        \item[(e)] Calculate the contribution of these modes to the free energy and heat capacity. (Evaluate the classical partition function, i.e.\ do not quantize the modes.)
+
+        \item[(f)] Find an expression for $\langle\vec{s}(\vec{0})\cdot\vec{s}(\vec{x})\rangle = \text{Re}\langle\exp[i(\theta_{\vec{x}} - \theta_{\vec{0}})]\rangle$ by adding contributions from different Fourier modes. Convince yourself that for $|\vec{x}| \to \infty$, only $q \to 0$ modes contribute appreciably to this expression, and hence calculate the asymptotic limit.
+
+        \item[(g)] Calculate the transverse susceptibility from $\chi_t \propto \int d^dx\,\langle\vec{s}(\vec{0})\cdot\vec{s}(\vec{x})\rangle_c$. How does it depend on the system size $L$?
+
+        \item[(h)] In $d = 2$, show that $\chi_t$ only diverges for $K$ larger than a critical value $K_c = 1/(4\pi)$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Capillary waves}: A reasonably flat surface in $d$ dimensions can be described by its height $h$, as a function of the remaining $d-1$ coordinates $\vec{x} = (x_1, \ldots, x_{d-1})$. Convince yourself that the generalized ``area'' is given by $\mathcal{A} = \int d^{d-1}x\,\sqrt{1 + (\nabla h)^2}$. With a surface tension $\sigma$, the Hamiltonian is simply $\mathcal{H} = \sigma\mathcal{A}$.
+
+    \begin{enumerate}
+        \item[(a)] At sufficiently low temperatures, there are only slow variations in $h$. Expand the energy to quadratic order, and write down the partition function as a functional integral.
+
+        \item[(b)] Use Fourier transformation to diagonalize the quadratic Hamiltonian into its normal modes $\{h_{\vec{q}}\}$ (capillary waves).
+
+        \item[(c)] What symmetry breaking is responsible for these Goldstone modes?
+
+        \item[(d)] Calculate the height--height correlations $\langle(h(\vec{x}) - h(\vec{x}'))^2\rangle$.
+
+        \item[(e)] Comment on the form of the result in (d) in dimensions $d = 4, 3, 2$, and $1$.
+
+        \item[(f)] By estimating typical values of $h$, comment on when it is justified to ignore higher order terms in the expansion for $\mathcal{A}$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Gauge fluctuations in superconductors}: The Landau--Ginzburg model of superconductivity describes a complex superconducting order parameter $\psi(\vec{x}) = \psi_1(\vec{x}) + i\psi_2(\vec{x})$, and the electromagnetic vector potential $\vec{A}(\vec{x})$, which are subject to a Hamiltonian
+    \[
+        \mathcal{H} = \int d^3x\left[\frac{t}{2}|\psi|^2 + u|\psi|^4 + \frac{K}{2}|D_\mu\psi|^2 + \frac{L}{2}|\nabla\times\vec{A}|^2\right].
+    \]
+    The gauge-invariant derivative $D_\mu \equiv \partial_\mu - ieA_\mu(\vec{x})$ introduces the coupling between the two fields. (In terms of Cooper pair parameters, $e = e^*c/\hbar$, $K = \hbar^2/2m^*$.)
+
+    \begin{enumerate}
+        \item[(a)] Show that the above Hamiltonian is invariant under the local gauge symmetry:
+        \[
+            \psi(\vec{x}) \to \psi(\vec{x})\exp\!\bigl(i\chi(\vec{x})\bigr) \quad \text{and} \quad A_\mu(\vec{x}) \to A_\mu(\vec{x}) + \frac{1}{e}\partial_\mu\chi.
+        \]
+
+        \item[(b)] Show that there is a saddle point solution of the form $\psi(\vec{x}) = \bar{\psi}$ and $\vec{A}(\vec{x}) = 0$, and find $\bar{\psi}$ for $t > 0$ and $t < 0$.
+
+        \item[(c)] For $t < 0$, calculate the cost of fluctuations by setting
+        \[
+            \psi(\vec{x}) = \bigl(\bar{\psi} + \phi(\vec{x})\bigr)\exp\!\bigl(i\theta(\vec{x})\bigr), \quad \vec{A}(\vec{x}) = \vec{a}(\vec{x}),
+        \]
+        with $\nabla\cdot\vec{a} = 0$ in the Coulomb gauge, and expanding $\mathcal{H}$ to quadratic order in $\phi$, $\theta$, and $\vec{a}$.
+
+        \item[(d)] Perform a Fourier transformation, and calculate the expectation values $\langle|\phi_{\vec{q}}|^2\rangle$, $\langle|\theta_{\vec{q}}|^2\rangle$, and $\langle|\vec{a}_{\vec{q}}|^2\rangle$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Fluctuations around a tricritical point}: As shown in a previous problem, the Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla m)^2 + \frac{t}{2}m^2 + um^4 + vm^6\right],
+    \]
+    with $u = 0$ and $v > 0$ describes a tricritical point.
+
+    \begin{enumerate}
+        \item[(a)] Calculate the heat capacity singularity as $t \to 0$ by the saddle point approximation.
+
+        \item[(b)] Include both longitudinal and transverse fluctuations by setting
+        \[
+            \vec{m}(\vec{x}) = \bigl(m + \phi_\ell(\vec{x})\bigr)\hat{e}_\ell + \sum_{\alpha=2}^{n}\phi_{t,\alpha}(\vec{x})\hat{e}_\alpha,
+        \]
+        and expanding $\mathcal{H}$ to quadratic order in $\phi$.
+
+        \item[(c)] Calculate the longitudinal and transverse correlation functions.
+
+        \item[(d)] Compute the first correction to the saddle point free energy from fluctuations.
+
+        \item[(e)] Find the fluctuation correction to the heat capacity.
+
+        \item[(f)] By comparing the results from parts (a) and (e) for $t < 0$, obtain a Ginzburg criterion, and the upper critical dimension for validity of mean-field theory at a tricritical point.
+
+        \item[(g)] A generalized multicritical point is described by replacing the term $vm^6$ with $u_{2n}m^{2n}$. Use simple power counting to find the upper critical dimension of this multicritical point.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Coupling to a ``massless'' field}: Consider an $n$-component vector field $\vec{m}(\vec{x})$ coupled to a scalar field $A(\vec{x})$, through the effective Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla\vec{m})^2 + \frac{t}{2}\vec{m}^2 + u(\vec{m}^2)^2 + e^2\vec{m}^2 A^2 + \frac{L}{2}(\nabla A)^2\right],
+    \]
+    with $K$, $L$, and $u$ positive.
+
+    \begin{enumerate}
+        \item[(a)] Show that there is a saddle point solution of the form $\vec{m}(\vec{x}) = m\hat{e}_\ell$ and $A(\vec{x}) = 0$, and find $m$ for $t > 0$ and $t < 0$.
+
+        \item[(b)] Sketch the heat capacity $C = \partial^2\ln Z/\partial t^2$, and discuss its singularity as $t \to 0$ in the saddle point approximation.
+
+        \item[(c)] Include fluctuations by setting $\vec{m}(\vec{x}) = (m + \phi_\ell(\vec{x}))\hat{e}_\ell + \phi_t(\vec{x})\hat{e}_t$ and $A(\vec{x}) = a(\vec{x})$, and expand $\mathcal{H}$ to quadratic order in $\phi$ and $a$.
+
+        \item[(d)] Find the correlation lengths $\xi_\ell$ and $\xi_t$ for the longitudinal and transverse components of $\phi$, for $t > 0$ and $t < 0$.
+
+        \item[(e)] Find the correlation length $\xi_a$ for the fluctuations of the scalar field $a$, for $t > 0$ and $t < 0$.
+
+        \item[(f)] Calculate the correlation function $\langle a(\vec{x})a(\vec{0})\rangle$ for $t > 0$.
+
+        \item[(g)] Compute the correction to the saddle point free energy $\ln Z$, from fluctuations. (You can leave the answer in the form of integrals involving $\xi_\ell$, $\xi_t$, and $\xi_a$.)
+
+        \item[(h)] Find the fluctuation corrections to the heat capacity in (b), again leaving the answer in the form of integrals.
+
+        \item[(i)] Discuss the behavior of the integrals appearing above schematically, and state their dependence on the correlation length $\xi$, and cutoff $\Lambda$, in different dimensions.
+
+        \item[(j)] What is the critical dimension for the validity of saddle point results, and how is it modified by the coupling to the scalar field?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Random magnetic fields}: Consider the Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla m)^2 + \frac{t}{2}m^2 + um^4 - h(\vec{x})m(\vec{x})\right],
+    \]
+    where $m(\vec{x})$ and $h(\vec{x})$ are scalar fields, and $u > 0$. The random magnetic field $h(\vec{x})$ results from frozen (quenched) impurities that are independently distributed in space. For simplicity $h(\vec{x})$ is assumed to be an independent Gaussian variable at each point $\vec{x}$, such that
+    \[
+        \overline{h(\vec{x})} = 0 \quad \text{and} \quad \overline{h(\vec{x})h(\vec{x}')} = \Delta\,\delta^d(\vec{x} - \vec{x}'),
+    \]
+    where the overline indicates (quench) averaging over all values of the random fields. The above equation implies that the Fourier transformed random field $\tilde{h}(\vec{q})$ satisfies
+    \[
+        \overline{\tilde{h}(\vec{q})} = 0 \quad \text{and} \quad \overline{\tilde{h}(\vec{q})\tilde{h}(\vec{q}')} = \Delta\,(2\pi)^d\delta^d(\vec{q}+\vec{q}').
+    \]
+
+    \begin{enumerate}
+        \item[(a)] Calculate the quench averaged free energy $f_{\rm sp} = \min_m \mathcal{H}(m)$, assuming a saddle point solution with uniform magnetization $m(\vec{x}) = m$.
+
+        \item[(b)] Include fluctuations by setting $m(\vec{x}) = m + \phi(\vec{x})$, and expand $\mathcal{H}$ to second order in $\phi$.
+
+        \item[(c)] Express the energy cost of the above fluctuations in terms of the Fourier modes $\phi_{\vec{q}}$.
+
+        \item[(d)] Calculate the mean $\langle\phi_{\vec{q}}\rangle$ and the variance $\langle|\phi_{\vec{q}}|^2\rangle_c$, where $\langle\cdots\rangle$ denotes the usual thermal expectation value for a fixed $\tilde{h}(\vec{q})$.
+
+        \item[(e)] Use the above results, in conjunction with the quench average, to calculate the scattering line shape $S(\vec{q}) = \overline{\langle|\phi_{\vec{q}}|^2\rangle}$.
+
+        \item[(f)] Perform the Gaussian integrals over $\phi_{\vec{q}}$ to calculate the fluctuation corrections $f[\tilde{h}(\vec{q})]$ to the free energy.
+
+        \item[(g)] Use the quench average to calculate the corrections due to the fluctuations in the previous part to the quench averaged free energy $\bar{f}$. (Leave the corrections in the form of two integrals.)
+
+        \item[(h)] Estimate the singular $t$ dependence of the integrals obtained in the fluctuation corrections to the free energy.
+
+        \item[(i)] Find the upper critical dimension $d_u$ for the validity of saddle point critical behavior.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Long-range interactions}: Consider a continuous spin field $\vec{s}(\vec{x})$, subject to a long-range ferromagnetic interaction
+    \[
+        \int d^dx\,d^dy\,\frac{\vec{s}(\vec{x})\cdot\vec{s}(\vec{y})}{|\vec{x}-\vec{y}|^{d+\sigma}},
+    \]
+    as well as short-range interactions.
+
+    \begin{enumerate}
+        \item[(a)] How is the quadratic term in the Landau--Ginzburg expansion modified by the presence of this long-range interaction? For what values of $\sigma$ is the long-range interaction dominant?
+
+        \item[(b)] By estimating the magnitude of thermally excited Goldstone modes (or otherwise), obtain the lower critical dimension $d_\ell$ below which there is no long-range order.
+
+        \item[(c)] Find the upper critical dimension $d_u$, above which saddle point results provide a correct description of the phase transition.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Ginzburg criterion along the magnetic field direction}: Consider the Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla\vec{m})^2 + \frac{t}{2}\vec{m}^2 + u(\vec{m}^2)^2 - \vec{h}\cdot\vec{m}\right],
+    \]
+    describing an $n$-component magnetization vector $\vec{m}(\vec{x})$, with $u > 0$.
+
+    \begin{enumerate}
+        \item[(a)] In the saddle point approximation, the free energy is $f = \min_m \mathcal{H}(m)$. Indicate the resulting phase boundary in the $(h,t)$ plane, and label the phases. ($h$ denotes the magnitude of $\vec{h}$.)
+
+        \item[(b)] Sketch the form of $m$ for $t < 0$, on both sides of the phase boundary, and for $t > 0$ at $h = 0$.
+
+        \item[(c)] For $t$ and $h$ close to zero, the spontaneous magnetization can be written as $m = t^\beta g_m(h/t^\Delta)$. Identify the exponents $\beta$ and $\Delta$ in the saddle point approximation. For the remainder of this problem set $t = 0$.
+
+        \item[(d)] Calculate the transverse and longitudinal susceptibilities at a finite $h$.
+
+        \item[(e)] Include fluctuations by setting $\vec{m}(\vec{x}) = (m + \phi_\ell(\vec{x}))\hat{e}_\ell + \vec{\phi}_t(\vec{x})\hat{e}_t$ and expanding $\mathcal{H}$ to second order in the $\phi$s. ($\hat{e}_\ell$ is a unit vector parallel to the average magnetization, and $\hat{e}_t$ is perpendicular to it.)
+
+        \item[(f)] Calculate the longitudinal and transverse correlation lengths.
+
+        \item[(g)] Calculate the first correction to the free energy from these fluctuations. (The scaling form is sufficient.)
+
+        \item[(h)] Calculate the first correction to the magnetization, and to the longitudinal susceptibility, from the fluctuations.
+
+        \item[(i)] By comparing the saddle point value with the correction due to fluctuations, find the upper critical dimension $d_u$ for the validity of the saddle point result.
+
+        \item[(j)] For $d < d_u$ obtain a Ginzburg criterion by finding the field $h_G$ below which fluctuations are important. (You may ignore the numerical coefficients in $h_G$, but the dependences on $K$ and $u$ are required.)
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

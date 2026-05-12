@@ -1,0 +1,210 @@
+\chapter{Perturbative renormalization group}
+
+\begin{problem}
+    \textit{Longitudinal susceptibility}: While there is no reason for the longitudinal susceptibility to diverge at the mean-field level, it in fact does so due to fluctuations in dimensions $d < 4$. This problem is intended to show you the origin of this divergence in perturbation theory.
+
+    Consider the Landau--Ginzburg Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla\vec{m})^2 + \frac{t}{2}\vec{m}^2 + u(\vec{m}^2)^2\right],
+    \]
+    describing an $n$-component magnetization vector $\vec{m}(\vec{x})$, in the ordered phase for $t < 0$.
+
+    \begin{enumerate}
+        \item[(a)] Let $\vec{m}(\vec{x}) = (m + \phi_\ell(\vec{x}))\hat{e}_\ell + \vec{\phi}_t(\vec{x})\hat{e}_t$, and expand $\mathcal{H}$ keeping all terms in the expansion.
+
+        \item[(b)] Regard the quadratic terms in $\phi_\ell$ and $\vec{\phi}_t$ as an unperturbed Hamiltonian $\mathcal{H}_0$, and the lowest order term coupling $\phi_\ell$ and $\vec{\phi}_t$ as a perturbation $U$; i.e.
+        \[
+            U = 4um\int d^dx\,\phi_\ell(\vec{x})\,|\vec{\phi}_t(\vec{x})|^2.
+        \]
+        Write $U$ in Fourier space in terms of $\phi_{\ell,\vec{q}}$ and $\vec{\phi}_{t,\vec{q}}$.
+
+        \item[(c)] Calculate the Gaussian (bare) expectation values $\langle\phi_{\ell,\vec{q}}\phi_{\ell,\vec{q}'}\rangle_0$ and $\langle\phi_{t,\alpha,\vec{q}}\phi_{t,\beta,\vec{q}'}\rangle_0$, and the corresponding momentum-dependent susceptibilities $\chi_\ell(\vec{q})_0$ and $\chi_t(\vec{q})_0$.
+
+        \item[(d)] Calculate $\langle\vec{\phi}_{t,\vec{q}_1}\cdot\vec{\phi}_{t,\vec{q}_2}\,\vec{\phi}_{t,\vec{q}_1'}\cdot\vec{\phi}_{t,\vec{q}_2'}\rangle_0$ using Wick's theorem. (Don't forget that $\vec{\phi}_t$ is an $(n-1)$-component vector.)
+
+        \item[(e)] Write down the expression for $\langle\phi_{\ell,\vec{q}}\phi_{\ell,\vec{q}'}\rangle$ to second order in the perturbation $U$. Note that since $U$ is odd in $\phi_\ell$, only two terms at second order are non-zero.
+
+        \item[(f)] Using the form of $U$ in Fourier space, write the correction term as a product of two four-point expectation values similar to those of part (d). Note that only connected terms for the longitudinal four-point function should be included.
+
+        \item[(g)] Ignore the disconnected term obtained in (d) (i.e.\ the part proportional to $(n-1)^2$), and write down the expression for $\chi_\ell(\vec{q})$ in second-order perturbation theory.
+
+        \item[(h)] Show that for $d < 4$, the correction term diverges as $q^{d-4}$ for $q \to 0$, implying an infinite longitudinal susceptibility.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Crystal anisotropy}: Consider a ferromagnet with a tetragonal crystal structure. Coupling of the spins to the underlying lattice may destroy their full rotational symmetry. The resulting anisotropies can be described by modifying the Landau--Ginzburg Hamiltonian to
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla\vec{m})^2 + \frac{t}{2}\vec{m}^2 + u(\vec{m}^2)^2 + \frac{r}{2}m_1^2 + vm_1^2\vec{m}^2\right],
+    \]
+    where $\vec{m} \equiv (m_1, \ldots, m_n)$, and $\vec{m}^2 = \sum_{i=1}^n m_i^2$ ($d = n = 3$ for magnets in three dimensions). Here $u > 0$, and to simplify calculations we shall set $v = 0$ throughout.
+
+    \begin{enumerate}
+        \item[(a)] For a fixed magnitude $|\vec{m}|$, what directions in the $n$-component magnetization space are selected for $r > 0$, and for $r < 0$?
+
+        \item[(b)] Using the saddle point approximation, calculate the free energies ($\ln Z$) for phases uniformly magnetized parallel and perpendicular to direction 1.
+
+        \item[(c)] Sketch the phase diagram in the $(t,r)$ plane, and indicate the phases (type of order), and the nature of the phase transitions (continuous or discontinuous).
+
+        \item[(d)] Are there Goldstone modes in the ordered phases?
+
+        \item[(e)] For $u = 0$, and positive $t$ and $r$, calculate the unperturbed averages $\langle m_{1,\vec{q}}m_{1,\vec{q}'}\rangle_0$ and $\langle m_{2,\vec{q}}m_{2,\vec{q}'}\rangle_0$, where $m_{i,\vec{q}}$ indicates the Fourier transform of $m_i(\vec{x})$.
+
+        \item[(f)] Write the fourth-order term $\mathcal{U} \equiv u\int d^dx\,(\vec{m}^2)^2$, in terms of the Fourier modes $m_{i,\vec{q}}$.
+
+        \item[(g)] Treating $\mathcal{U}$ as a perturbation, calculate the first-order correction to $\langle m_{1,\vec{q}}m_{1,\vec{q}'}\rangle$. (You can leave your answers in the form of some integrals.)
+
+        \item[(h)] Treating $\mathcal{U}$ as a perturbation, calculate the first-order correction to $\langle m_{2,\vec{q}}m_{2,\vec{q}'}\rangle$.
+
+        \item[(i)] Using the above answer, identify the inverse susceptibility $\chi_{22}^{-1}$, and then find the transition point $t_c$ from its vanishing, to first order in $u$.
+
+        \item[(j)] Is the critical behavior different from the isotropic $O(n)$ model in $d < 4$? In RG language, is the parameter $r$ relevant at the $O(n)$ fixed point? In either case indicate the universality classes expected for the transitions.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Cubic anisotropy -- mean-field treatment}: Consider the modified Landau--Ginzburg Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{K}{2}(\nabla\vec{m})^2 + \frac{t}{2}\vec{m}^2 + u(\vec{m}^2)^2 + v\sum_{i=1}^n m_i^4\right],
+    \]
+    for an $n$-component vector $\vec{m}(\vec{x}) = (m_1, m_2, \ldots, m_n)$. The ``cubic anisotropy'' term $+v\sum_{i=1}^n m_i^4$ breaks the full rotational symmetry and selects specific directions.
+
+    \begin{enumerate}
+        \item[(a)] For a fixed magnitude $|\vec{m}|$, what directions in the $n$-component magnetization space are selected for $v > 0$ and for $v < 0$? What is the degeneracy of easy magnetization axes in each case?
+
+        \item[(b)] What are the restrictions on $u$ and $v$ for $\mathcal{H}$ to have finite minima? Sketch these regions of stability in the $(u,v)$ plane.
+
+        \item[(c)] In general, higher-order terms (e.g.\ $u_6(\vec{m}^2)^3$ with $u_6 > 0$) are present and ensure stability in the regions not allowed in part (b) (as in the case of the tricritical point discussed in earlier problems). With such terms in mind, sketch the saddle-point phase diagram in the $(t,v)$ plane for $u > 0$; clearly identifying the phases, and order of the transition lines.
+
+        \item[(d)] Are there any Goldstone modes in the ordered phases?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Cubic anisotropy -- $\epsilon$-expansion}:
+
+    \begin{enumerate}
+        \item[(a)] By looking at diagrams in a second-order perturbation expansion in both $u$ and $v$, show that the recursion relations for these couplings are
+        \[
+            \begin{cases}
+                \dfrac{du}{d\ell} = \epsilon u - 4C\bigl[(n+8)u^2 + 6uv\bigr], \\[6pt]
+                \dfrac{dv}{d\ell} = \epsilon v - 4C\bigl[12uv + 9v^2\bigr],
+            \end{cases}
+        \]
+        where $C = K_d\Lambda^d/(t + K\Lambda^2) \approx K_4/K^2$ is approximately a constant.
+
+        \item[(b)] Find all fixed points in the $(u,v)$ plane, and draw the flow patterns for $n < 4$ and $n > 4$. Discuss the relevance of the cubic anisotropy term near the stable fixed point in each case.
+
+        \item[(c)] Find the recursion relation for the reduced temperature $t$, and calculate the exponent $\nu$ at the stable fixed points for $n < 4$ and $n > 4$.
+
+        \item[(d)] Is the region of stability in the $(u,v)$ plane calculated in part (b) of the previous problem enhanced or diminished by inclusion of fluctuations? Since in reality higher-order terms will be present, what does this imply about the nature of the phase transition for a small negative $v$ and $n > 4$?
+
+        \item[(e)] Draw schematic phase diagrams in the $(t,v)$ plane ($u > 0$) for $n > 4$ and $n < 4$, identifying the ordered phases. Are there Goldstone modes in any of these phases close to the phase transition?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Exponents}: Two critical exponents at second order are
+    \[
+        \nu = \frac{1}{2} + \frac{n+2}{4(n+8)}\epsilon + \frac{(n+2)(n^2+23n+60)}{8(n+8)^3}\epsilon^2,
+        \qquad
+        \eta = \frac{n+2}{2(n+8)^2}\epsilon^2.
+    \]
+    Use scaling relations to obtain $\epsilon$-expansions for two or more of the remaining exponents $\alpha$, $\beta$, $\gamma$, $\delta$, and $\nu$. Make a table of the results obtained by setting $\epsilon = 1, 2$ for $n = 1, 2$, and $3$; and compare to the best estimates of these exponents that you can find by other sources (series, experiments, etc.).
+\end{problem}
+
+\begin{solution}
+\end{solution}
+
+\begin{problem}
+    \textit{Anisotropic criticality}: A number of materials, such as liquid crystals, are anisotropic and behave differently along distinct directions, which shall be denoted parallel and perpendicular, respectively. Let us assume that the $d$ spatial dimensions are grouped into $n_\parallel$ parallel directions $\vec{x}_\parallel$, and $d - n_\parallel$ perpendicular directions $\vec{x}_\perp$. Consider a one-component field $m(\vec{x}_\parallel, \vec{x}_\perp)$ subject to a Landau--Ginzburg Hamiltonian $\mathcal{H} = \mathcal{H}_0 + \mathcal{U}$, with
+    \[
+        \mathcal{H}_0 = \int d^{n_\parallel}x_\parallel\,d^{d-n_\parallel}x_\perp\left[\frac{K}{2}(\nabla_\parallel m)^2 + \frac{L}{2}(\nabla_\perp^2 m)^2 + \frac{t}{2}m^2 - hm\right],
+    \]
+    and $\mathcal{U} = u\int d^{n_\parallel}x_\parallel\,d^{d-n_\parallel}x_\perp\,m^4$. (Note that $\mathcal{H}$ depends on the first gradient in the $\vec{x}_\parallel$ directions, and on the second gradient in the $\vec{x}_\perp$ directions.)
+
+    \begin{enumerate}
+        \item[(a)] Write $\mathcal{H}_0$ in terms of the Fourier transforms $m(\vec{q}_\parallel, \vec{q}_\perp)$.
+
+        \item[(b)] Construct a renormalization group transformation for $\mathcal{H}_0$, by rescaling coordinates such that $\vec{q}'_\parallel = b\vec{q}_\parallel$ and $\vec{q}'_\perp = c\vec{q}_\perp$, and the field as $m'_{\vec{q}'} = m_{\vec{q}}/z$. Note that parallel and perpendicular directions are scaled differently. Write down the recursion relations for $K$, $L$, $t$, and $h$ in terms of $b$, $c$, and $z$.
+
+        \item[(c)] Choose $c(b)$ and $z(b)$ such that $K' = K$ and $L' = L$. At the resulting fixed point calculate the eigenvalues $y_t$ and $y_h$ for the rescalings of $t$ and $h$.
+
+        \item[(d)] Write the relationship between the (singular parts of) free energies $f(t,h)$ and $f'(t',h')$ in the original and rescaled problems. Hence write the unperturbed free energy in the homogeneous form $f(t,h) = t^{2-\alpha}g_f(h/t^\Delta)$, and identify the exponents $\alpha$ and $\Delta$.
+
+        \item[(e)] How does the unperturbed zero-field susceptibility $\chi(t, h=0)$ diverge as $t \to 0$? In the remainder of this problem set $h = 0$, and treat $\mathcal{U}$ as a perturbation.
+
+        \item[(f)] In the unperturbed Hamiltonian calculate the expectation value $\langle m_{\vec{q}}m_{\vec{q}'}\rangle_0$, and the corresponding susceptibility $\chi_0(\vec{q}) = \langle|m_{\vec{q}}|^2\rangle_0$, where $\vec{q}$ stands for $(\vec{q}_\parallel, \vec{q}_\perp)$.
+
+        \item[(g)] Write the perturbation $\mathcal{U}$, in terms of the normal modes $m_{\vec{q}}$.
+
+        \item[(h)] Using RG, or any other method, find the upper critical dimension $d_u$ for validity of the Gaussian exponents.
+
+        \item[(i)] Write down the expansion for $\langle m_{\vec{q}}m_{\vec{q}'}\rangle$, to first order in $\mathcal{U}$, and reduce the correction term to a product of two-point expectation values.
+
+        \item[(j)] Write down the expression for $\chi(\vec{q})$, in first-order perturbation theory, and identify the transition point $t_c$ at order of $u$. (Do not evaluate any integrals explicitly.)
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Long-range interactions between spins} can be described by adding a term
+    \[
+        \int d^dx\,d^dy\,J(\vec{x}-\vec{y})\,\vec{m}(\vec{x})\cdot\vec{m}(\vec{y})
+    \]
+    to the usual Landau--Ginzburg Hamiltonian.
+
+    \begin{enumerate}
+        \item[(a)] Show that for $J(r) \propto 1/r^{d+\sigma}$, the Hamiltonian can be written as
+        \[
+            \mathcal{H} = \int\frac{d^dq}{(2\pi)^d}\,\frac{t + K_2q^2 + K_\sigma q^\sigma + \cdots}{2}\,\vec{m}(\vec{q})\cdot\vec{m}(-\vec{q}) + u\int\frac{d^dq_1\,d^dq_2\,d^dq_3}{(2\pi)^{3d}}\,\bigl[\vec{m}(\vec{q}_1)\cdot\vec{m}(\vec{q}_2)\bigr]\bigl[\vec{m}(\vec{q}_3)\cdot\vec{m}(-\vec{q}_1-\vec{q}_2-\vec{q}_3)\bigr].
+        \]
+
+        \item[(b)] For $u = 0$, construct the recursion relations for $t$, $K_2$, $K_\sigma$ and show that $K_2$ is irrelevant for $\sigma > 2$. What is the fixed Hamiltonian in this case?
+
+        \item[(c)] For $\sigma < 2$ and $u = 0$, show that the spin rescaling factor must be chosen such that $K'_\sigma = K_\sigma$, in which case $K_2$ is irrelevant. What is the fixed Hamiltonian now?
+
+        \item[(d)] For $\sigma < 2$, calculate the generalized Gaussian exponents $\alpha$, $\beta$, $\gamma$ from the recursion relations. Show that $u$ is irrelevant, and hence the Gaussian results are valid, for $d > 2\sigma$.
+
+        \item[(e)] For $\sigma < 2$, use a perturbation expansion in $u$ to construct the recursion relations for $t$, $K_\sigma$, $u$ as in the text.
+
+        \item[(f)] For $d < 2\sigma$, calculate the critical exponents $\nu$ and $\eta$ to first order in $\epsilon = d - 2\sigma$.
+
+        \item[(g)] What is the critical behavior if $J(r) \propto \exp(-r/a)$? Explain!
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

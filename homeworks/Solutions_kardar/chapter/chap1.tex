@@ -1,0 +1,187 @@
+\chapter{Collective behavior, from particles to fields}
+
+\begin{problem}
+    \textit{The binary alloy}: A binary alloy (as in $\beta$-brass) consists of $N_A$ atoms of type $A$, and $N_B$ atoms of type $B$. The atoms form a simple cubic lattice, each interacting only with its six nearest neighbors. Assume an attractive energy of $-J$ ($J>0$) between like neighbors $A$--$A$ and $B$--$B$, but a repulsive energy of $+J$ for an $A$--$B$ pair.
+
+    \begin{enumerate}
+        \item[(a)] What is the minimum energy configuration, or the state of the system at zero temperature?
+
+        \item[(b)] Estimate the total interaction energy assuming that the atoms are randomly distributed among the $N$ sites; i.e.\ each site is occupied independently with probabilities $p_A = N_A/N$ and $p_B = N_B/N$.
+
+        \item[(c)] Estimate the mixing entropy of the alloy with the same approximation. Assume $N_A, N_B \gg 1$.
+
+        \item[(d)] Using the above, obtain a free energy function $F(x)$, where $x = (N_A - N_B)/N$. Expand $F(x)$ to the fourth order in $x$, and show that the requirement of convexity of $F$ breaks down below a critical temperature $T_c$. For the remainder of this problem use the expansion obtained in (d) in place of the full function $F(x)$.
+
+        \item[(e)] Sketch $F(x)$ for $T > T_c$, $T = T_c$, and $T < T_c$. For $T < T_c$ there is a range of compositions $|x| < x_{\text{sp}}(T)$ where $F(x)$ is not convex and hence the composition is locally unstable. Find $x_{\text{sp}}(T)$.
+
+        \item[(f)] The alloy globally minimizes its free energy by separating into $A$-rich and $B$-rich phases of compositions $\pm x_{\text{eq}}(T)$, where $x_{\text{eq}}(T)$ minimizes the function $F(x)$. Find $x_{\text{eq}}(T)$.
+
+        \item[(g)] In the $(T, x)$ plane sketch the phase separation boundary $\pm x_{\text{eq}}(T)$; and the so-called spinodal line $\pm x_{\text{sp}}(T)$. (The spinodal line indicates onset of metastability and hysteresis effects.)
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The Ising model of magnetism}: The local environment of an electron in a crystal sometimes forces its spin to stay parallel or anti-parallel to a given lattice direction. As a model of magnetism in such materials we denote the direction of the spin by a single variable $\sigma_i = \pm 1$ (an Ising spin). The energy of a configuration $\{\sigma_i\}$ of spins is then given by
+    \[
+        \mathcal{H} = -\frac{1}{2}\sum_{i,j=1}^{N} J_{ij}\,\sigma_i\sigma_j - h\sum_i \sigma_i,
+    \]
+    where $h$ is an external magnetic field, and $J_{ij}$ is the interaction energy between spins at sites $i$ and $j$.
+
+    \begin{enumerate}
+        \item[(a)] For $N$ spins we make the drastic approximation that the interaction between all spins is the same, and $J_{ij} = -J/N$ (the equivalent neighbor model). Show that the energy can now be written as $E(M,h) = -N\bigl[Jm^2/2 + hm\bigr]$, with a magnetization $m = \sum_{i=1}^N \sigma_i/N = M/N$.
+
+        \item[(b)] Show that the partition function $Z(h,T) = \sum_{\{\sigma_i\}} \exp(-\beta\mathcal{H})$ can be rewritten as $Z = \sum_M \exp\!\bigl(-\beta F(m,h)\bigr)$, with $F(m,h)$ easily calculated by analogy to problem~(1). For the remainder of the problem work only with $F(m,h)$ expanded to fourth order in $m$.
+
+        \item[(c)] By saddle point integration show that the actual free energy $F(h,T) = -k_BT\ln Z(h,T)$ is given by $F(h,T) = \min_m\{F(m,h)\}|_m$. When is the saddle point method valid? Note that $F(m,h)$ is an analytic function but not convex for $T < T_c$, while the true free energy $F(h,T)$ is convex but becomes non-analytic due to the minimization.
+
+        \item[(d)] For $h = 0$ find the critical temperature $T_c$ below which spontaneous magnetization appears; and calculate the magnetization $m(T)$ in the low temperature phase.
+
+        \item[(e)] Calculate the singular (non-analytic) behavior of the response functions
+        \[
+            C = \left.\frac{\partial E}{\partial T}\right|_{h=0} \quad \text{and} \quad \chi = \left.\frac{\partial m}{\partial h}\right|_{h=0}.
+        \]
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The lattice-gas model}: Consider a gas of particles subject to a Hamiltonian
+    \[
+        \mathcal{H} = \sum_{i=1}^{N}\frac{\vec{p}_i^{\,2}}{2m} + \frac{1}{2}\sum_{i\neq j} \mathcal{V}(\vec{r}_i - \vec{r}_j),
+    \]
+    in a volume $V$.
+
+    \begin{enumerate}
+        \item[(a)] Show that the grand partition function $\Xi$ can be written as
+        \[
+            \Xi = \sum_{N=0}^{\infty}\frac{1}{N!}\left(\frac{e^{\beta\mu}}{\lambda^3}\right)^N \int \prod_{i=1}^{N} d^3\vec{r}_i \exp\!\left(-\frac{\beta}{2}\sum_{i\neq j}\mathcal{V}(\vec{r}_i - \vec{r}_j)\right),
+        \]
+        where $\lambda$ is the thermal de Broglie wavelength.
+
+        \item[(b)] The volume $V$ is now subdivided into $\mathcal{M} = V/a^3$ cells of volume $a^3$, with the spacing $a$ chosen small enough so that each cell $\alpha$ is either empty or occupied by one particle; i.e.\ the cell occupation number $n_\alpha$ is restricted to 0 or 1 ($\alpha = 1, 2, \ldots, \mathcal{M}$). After approximating the integrals $\int d^3\vec{r}$ by sums $a^3\sum_{\alpha=1}^{\mathcal{M}}$, show that
+        \[
+            \Xi \approx \sum_{\{n_\alpha = 0,1\}} \prod_\alpha \left(\frac{e^{\beta\mu} a^3}{\lambda^3}\right)^{n_\alpha} \exp\!\left(-\frac{\beta}{2}\sum_{\alpha,\beta=1}^{\mathcal{M}} n_\alpha n_\beta\, \mathcal{V}(\vec{r}_\alpha - \vec{r}_\beta)\right).
+        \]
+
+        \item[(c)] By setting $n_\alpha = (1 + \sigma_\alpha)/2$ and approximating the potential by $\mathcal{V}(\vec{r}_\alpha - \vec{r}_\beta) = -J/\mathcal{M}$, show that this model is identical to the one studied in problem~(2). What does this imply about the behavior of this imperfect gas?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Surfactant condensation}: $N$ surfactant molecules are added to the surface of water over an area $A$. They are subject to a Hamiltonian
+    \[
+        \mathcal{H} = \sum_{i=1}^{N}\frac{\vec{p}_i^{\,2}}{2m} + \frac{1}{2}\sum_{i\neq j}\mathcal{V}(\vec{r}_i - \vec{r}_j),
+    \]
+    where $\vec{r}_i$ and $\vec{p}_i$ are two-dimensional vectors indicating the position and momentum of particle $i$.
+
+    \begin{enumerate}
+        \item[(a)] Write down the expression for the partition function $Z(N,T,A)$ in terms of integrals over $\vec{r}_i$ and $\vec{p}_i$, and perform the integrals over the momenta. The interparticle potential $\mathcal{V}(\vec{r})$ is infinite for $|\vec{r}| < a$, and attractive for $|\vec{r}| > a$ such that $\int_a^\infty 2\pi r\,dr\,\mathcal{V}(r) = -u_0$.
+
+        \item[(b)] Estimate the total non-excluded area available in the positional phase space of the system of $N$ particles.
+
+        \item[(c)] Estimate the total potential energy of the system, assuming a uniform density $n = N/A$. Using this potential energy for all configurations allowed in the previous part, write down an approximation for $Z$.
+
+        \item[(d)] The surface tension of water without surfactants is $\sigma_0$, approximately independent of temperature. Calculate the surface tension $\sigma(n,T)$ in the presence of surfactants.
+
+        \item[(e)] Show that below a certain temperature $T_c$, the expression for $\sigma$ is manifestly incorrect. What do you think happens at low temperatures?
+
+        \item[(f)] Compute the heat capacities $C_A$, and write down an expression for $C$ without explicit evaluation, due to the surfactants.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Critical behavior of a gas}: The pressure $P$ of a gas is related to its density $n = N/V$, and temperature $T$ by the truncated expansion
+    \[
+        P = k_BT\!\left(n - \frac{b}{2}n^2 + \frac{c}{6}n^3\right),
+    \]
+    where $b$ and $c$ are assumed to be positive, temperature independent constants.
+
+    \begin{enumerate}
+        \item[(a)] Locate the critical temperature $T_c$ below which this equation must be invalid, and the corresponding density $n_c$ and pressure $P_c$ of the critical point. Hence find the ratio $k_BT_c n_c/P_c$.
+
+        \item[(b)] Calculate the isothermal compressibility $\kappa_T = -\frac{1}{V}\left.\frac{\partial V}{\partial P}\right|_T$, and sketch its behavior as a function of $T$ for $n = n_c$.
+
+        \item[(c)] On the critical isotherm give an expression for $P - P_c$ as a function of $n - n_c$.
+
+        \item[(d)] The instability in the isotherms for $T < T_c$ is avoided by phase separation into a liquid of density $n_+$ and gas of density $n_-$. For temperatures close to $T_c$, these densities behave as $n_\pm \approx n_c(1 \pm \varepsilon)$. Using a Maxwell construction, or otherwise, find an implicit equation for $\varepsilon(T)$, and indicate its behavior for $T_c - T \to 0$. (\textit{Hint}: Along an isotherm, variations of chemical potential obey $d\mu = dP/n$.)
+
+        \item[(e)] Now consider a gas obeying Dieterici's equation of state:
+        \[
+            P(v - b) = k_BT \exp\!\left(-\frac{a}{k_BT v}\right),
+        \]
+        where $v = V/N$. Find the ratio $Pv/k_BT$ at its critical point.
+
+        \item[(f)] Calculate the isothermal compressibility $\kappa_T$ for $v = v_c$ as a function of $T - T_c$ for the Dieterici gas.
+
+        \item[(g)] On the Dieterici critical isotherm expand the pressure to the lowest non-zero order in $v - v_c$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Magnetic thin films}: A crystalline film (simple cubic) is obtained by depositing a finite number of layers $n$. Each atom has a three-component (Heisenberg) spin, and they interact through the Hamiltonian
+    \[
+        -\beta\mathcal{H} = \sum_{\ell=1}^{n}\sum_{\langle ij\rangle} J_H\,\vec{s}_i^{\,\ell}\cdot\vec{s}_j^{\,\ell} + \sum_{\ell=1}^{n-1}\sum_i J_V\,\vec{s}_i^{\,\ell}\cdot\vec{s}_i^{\,\ell+1},
+    \]
+    where the unit vector $\vec{s}_i^{\,\ell}$ indicates the spin at site $i$ in the $\ell$-th layer. A mean-field approximation is obtained from the variational density $\rho_0 \propto \exp(-\beta\mathcal{H}_0)$, with the trial Hamiltonian
+    \[
+        -\beta\mathcal{H}_0 = \sum_{\ell=1}^{n}\sum_i \vec{h}^{\,\ell}\cdot\vec{s}_i^{\,\ell}.
+    \]
+
+    \begin{enumerate}
+        \item[(a)] Calculate the partition function $Z_0\bigl(\{\vec{h}^{\,\ell}\}\bigr)$, and $F_0 = -\ln Z_0$.
+
+        \item[(b)] Obtain the magnetizations $m^\ell = \langle\vec{s}_i^{\,\ell}\rangle_0$, and $\partial^2 F_0/\partial h_0^2$, in terms of the Langevin function $\mathcal{L}(h) = \coth h - 1/h$.
+
+        \item[(c)] Calculate $\langle\mathcal{H}\rangle_0$, with the (reasonable) assumption that all the variational fields $\{\vec{h}^{\,\ell}\}$ are parallel.
+
+        \item[(d)] The exact free energy $F = -\ln Z$ satisfies the Gibbs inequality $F \leq F_0 + \langle\mathcal{H} - \mathcal{H}_0\rangle_0$. Give the self-consistent equations for the magnetizations $m^\ell$ that optimize $F_0$. How would you solve these equations numerically?
+
+        \item[(e)] Find the critical temperature, and the behavior of the magnetization in the bulk by considering the limit $n \to \infty$. (Note that $\lim_{m\to 0}\mathcal{L}^{-1}(m) = 3m + 9m^3/5 + \cdots$.)
+
+        \item[(f)] By linearizing the self-consistent equations, show that the critical temperature of the film depends on the number of layers $n$ as
+        \[
+            kT_c(n\gg 1) \approx kT_c - \frac{J_V^2}{3n^2}.
+        \]
+
+        \item[(g)] Derive a continuum form of the self-consistent equations, and keep terms to cubic order in $m$. Show that the resulting nonlinear differential equation has a solution of the form $m(x) = m_{\rm bulk}\tanh(kx)$. What circumstances are described by this solution?
+
+        \item[(h)] How can the above solution be modified to describe a semi-infinite system? Obtain the critical behaviors of the healing length $\xi \sim 1/k$.
+
+        \item[(i)] Show that the magnetization of the surface layer vanishes as $|T - T_c|^\beta$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

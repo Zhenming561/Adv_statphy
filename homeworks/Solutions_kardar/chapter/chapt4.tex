@@ -1,0 +1,103 @@
+\chapter{The scaling hypothesis}
+
+\begin{problem}
+    \textit{Scaling in fluids}: Near the liquid--gas critical point, the free energy is assumed to take the scaling form $F/N = t^{2-\alpha}g(\Delta\rho/t^\beta)$, where $t = (T - T_c)/T_c$ is the reduced temperature, and $\Delta\rho = \rho - \rho_c$ measures deviations from the critical point density. The leading singular behavior of any thermodynamic parameter $Q(t)$ is of the form $t^x$ on approaching the critical point along the isochore $\rho = \rho_c$; or $(\Delta\rho)^y$ for a path along the isotherm $T = T_c$. Find the exponents $x$ and $y$ for the following quantities:
+
+    \begin{enumerate}
+        \item[(a)] The internal energy per particle $\langle\mathcal{H}\rangle/N$, and the entropy per particle $s = S/N$.
+
+        \item[(b)] The heat capacities $C_V = T(\partial s/\partial T)_V$ and $C_P = T(\partial s/\partial T)_P$.
+
+        \item[(c)] The isothermal compressibility $\kappa_T = (\partial\rho/\partial P)_T/\rho$, and the thermal expansion coefficient $\alpha_P = (\partial V/\partial T)_P/V$. Check that your results for parts (b) and (c) are consistent with the thermodynamic identity $C_P - C_V = TV\alpha_P^2/\kappa_T$.
+
+        \item[(d)] Sketch the behavior of the latent heat per particle $L$ on the coexistence curve for $T < T_c$, and find its singularity as a function of $t$.
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The Ising model}: The differential recursion relations for temperature $T$, and magnetic field $h$, of the Ising model in $d = 1 + \epsilon$ dimensions are (for $b = e^\ell$)
+    \[
+        \begin{cases}
+            \dfrac{dT}{d\ell} = -\epsilon T + \dfrac{1}{2}T^2, \\[6pt]
+            \dfrac{dh}{d\ell} = d\,h.
+        \end{cases}
+    \]
+
+    \begin{enumerate}
+        \item[(a)] Sketch the renormalization group flows in the $(T,h)$ plane (for $\epsilon > 0$), marking the fixed points along the $h = 0$ axis.
+
+        \item[(b)] Calculate the eigenvalues $y_t$ and $y_h$, at the critical fixed point, to order of $\epsilon$.
+
+        \item[(c)] Starting from the relation governing the change of the correlation length $\xi$ under renormalization, show that $\xi(t,h) = t^{-\nu}g(h/t^\Delta)$ (where $t = T/T_c - 1$), and find the exponents $\nu$ and $\Delta$.
+
+        \item[(d)] Use a hyperscaling relation to find the singular part of the free energy $f_{\rm sing}(t,h)$, and hence the heat capacity exponent $\alpha$.
+
+        \item[(e)] Find the exponents $\beta$ and $\gamma$ for the singular behaviors of the magnetization and susceptibility, respectively.
+
+        \item[(f)] Starting with the relation between susceptibility and correlations of local magnetizations, calculate the exponent $\eta$ for the critical correlations ($\langle m(\vec{0})m(\vec{x})\rangle \sim |\vec{x}|^{-(d-2+\eta)}$).
+
+        \item[(g)] How does the correlation length diverge as $T \to 0$ (along $h = 0$) for $d = 1$?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{The nonlinear $\sigma$ model} describes $n$-component unit spins. As we shall demonstrate later, in $d = 2$ dimensions, the recursion relations for temperature $T$, and magnetic field $h$, are (for $b = e^\ell$)
+    \[
+        \begin{cases}
+            \dfrac{dT}{d\ell} = \dfrac{n-2}{2\pi}T^2, \\[6pt]
+            \dfrac{dh}{d\ell} = 2h.
+        \end{cases}
+    \]
+
+    \begin{enumerate}
+        \item[(a)] How does the correlation length diverge as $T \to 0$?
+
+        \item[(b)] Write down the singular form of the free energy as $T, h \to 0$.
+
+        \item[(c)] How does the susceptibility $\chi$ diverge as $T \to 0$ for $h = 0$?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    \textit{Coupled scalars}: Consider the Hamiltonian
+    \[
+        \mathcal{H} = \int d^dx\left[\frac{t}{2}m^2 + \frac{K}{2}(\nabla m)^2 - hm + \frac{L}{2}(\nabla\phi)^2 + vm\phi\right],
+    \]
+    coupling two one-component fields $m$ and $\phi$.
+
+    \begin{enumerate}
+        \item[(a)] Write $\mathcal{H}$ in terms of the Fourier transforms $m_{\vec{q}}$ and $\phi_{\vec{q}}$.
+
+        \item[(b)] Construct a renormalization group transformation as in the text, by rescaling distances such that $\vec{q}' = b\vec{q}$; and the fields such that $m'_{\vec{q}'} = \tilde{m}_{\vec{q}}/z$ and $\phi'_{\vec{q}'} = \tilde{\phi}_{\vec{q}}/y$. Do not evaluate the integrals that just contribute a constant additive term.
+
+        \item[(c)] There is a fixed point such that $K' = K$ and $L' = L$. Find $y_t$, $y_h$, and $y_v$ at this fixed point.
+
+        \item[(d)] The singular part of the free energy has a scaling form $f_{\rm sing}(t,h,v) = t^{2-\alpha}g(h/t^\Delta, v/t^\phi)$ for $t, h, v$ close to zero. Find $\alpha$ and $\phi$.
+
+        \item[(e)] There is another fixed point such that $t' = t$ and $L' = L$. What are the relevant operators at this fixed point, and how do they scale?
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[(a)]
+        \item
+    \end{enumerate}
+\end{solution}

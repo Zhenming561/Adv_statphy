@@ -7,7 +7,17 @@
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{hyperref}
-
+\usepackage{xcolor} % 确保引入了颜色包
+\usepackage{hyperref}
+\usepackage{enumerate}
+\definecolor{myblue}{RGB}{0,0,139}
+\hypersetup{
+    colorlinks=true,       % false: 框线链接; true: 彩色文字链接
+    linkcolor=myblue,        % 内部链接颜色 (如目录, 方程引用, 图表引用)
+    filecolor=magenta,     % 本地文件链接颜色
+    urlcolor=cyan,         % 网页 URL 颜色
+    citecolor=green,       % 参考文献引用颜色
+}
 % --- 定义计数器 ---
 \newcounter{problemcount}[chapter] % 每个章节重新计数
 \renewcommand{\theproblemcount}{\thechapter.\arabic{problemcount}}
@@ -36,7 +46,73 @@
 }
 
 % --- 物理常用的符号简写 (针对 Kardar 风格) ---
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\oL}{\widehat{L}}
+\newcommand{\df}{\frac{\dd}{\dd x}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\pp}{\partial}
+\newcommand{\ccM}{\mathcal{M}}
 \newcommand{\dd}{\mathrm{d}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\he}{\hat{\ee}}
+\newcommand{\rhs}{R.H.S }
+\newcommand{\lhs}{L.H.S }
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ox}{\hat{x}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\op}{\hat{p}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\comm}[2]{\left[ #1 , #2 \right]}
+\newcommand{\anticomm}[2]{\left\{ #1 , #2 \right\}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\oO}{\hat{O}}
+\newcommand{\omP}{\hat{\mathcal{P}}}
+\newcommand{\I}{\mathbb{I}}
 \newcommand{\avg}[1]{\langle #1 \rangle}
-\newcommand{\kb}{k_B}
-\newcommand{\partder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\FA}{F(\hat{A})}
+\newcommand{\FB}{F(\hat{B})}
+\newcommand{\Tr}[1]{\mathrm{Tr}\left( #1 \right) }
+\newcommand{\oA}{\hat{A}}
+\newcommand{\oB}{\hat{B}}
+\newcommand{\orho}{\hat{\rho}}
+\newcommand{\U}{\hat{U}}
+\newcommand{\kps}{\ket{\psi}}
+\newcommand{\kph}{\ket{\phi}}
+\newcommand{\bps}{\bra{\psi}}
+\newcommand{\bph}{\bra{\phi}}
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+\newcommand{\basispsi}{\{\ket{\psi_i}\}}
+\newcommand{\oH}{\hat{H}}
+\newcommand{\wfr}{\Psi(\vec{r},t)}
+\newcommand{\oI}{\hat{\mathbb{I}}}
+\newcommand{\wf}{\Psi(x,t)}
+\newcommand{\upket}{\ket{\uparrow}}
+\newcommand{\downket}{\ket{\downarrow}}
+\newcommand{\upbra}{\bra{\uparrow}}
+\renewcommand{\a}{\hat{a}}
+\newcommand{\adag}{\hat{a}^ \dag}
+\newcommand{\oX}{\hat{X}}
+\newcommand{\oP}{\hat{P}}
+\newcommand{\oN}{\hat{N}}
+\newcommand{\downbra}{\bra{\downarrow}}
+\newcommand{\ketshoizero}{\ket{\psi_ \nu}}
+\newcommand{\brashoizero}{\bra{\psi_ \nu}}
+\newcommand{\ketsho}{\ket{\psi_ \nu^i}}
+\newcommand{\brasho}{\bra{\psi_ \nu^i}}
+\newcommand{\kn}{\ket{n}}
+\newcommand{\bn}{\bra{n}}
+\newcommand{\bfvec}[1]{\mathbf{#1}}
+\newcommand{\oU}{\hat{U}}
+\newcommand{\opy}{\hat{\sigma}_y}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\thermpd}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\newcommand{\ppd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ux}{\underbar{x}}
+\newcommand{\D}{\mathcal{D}}
+\renewcommand{\df}[2]{\frac{\dd #1}{\dd #2}}
+\newcommand{\dff}[2]{\frac{\dd^2 #1}{\dd #2^2}}
