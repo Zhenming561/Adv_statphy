@@ -10,6 +10,7 @@
 \usepackage{xcolor} % 确保引入了颜色包
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{bm}
 \definecolor{myblue}{RGB}{0,0,139}
 \hypersetup{
     colorlinks=true,       % false: 框线链接; true: 彩色文字链接
@@ -26,7 +27,7 @@
 % 使用 tcolorbox 可以让题目看起来更像教材风格，也可以简单用 list
 \newenvironment{problem}[1][]{
     \refstepcounter{problemcount}
-    \par\addvspace{1.5ex}
+    \par\addvspace{1ex}
     \noindent\textbf{Problem \theproblemcount} \textit{#1} \par
     \smallskip
     \itshape % 题目内容使用斜体区分

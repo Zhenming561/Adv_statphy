@@ -28,7 +28,56 @@
 
 \begin{solution}
     \begin{enumerate}[(a)]
-        \item
+        \item If we want to rewrite the partition function as an integral over the set of angles$\theta_i$ between the spins $\bm s_i$ and some arbitray axis, is actually we integrate over a cricle $\delta(\bm s_i^2 - 1)$ in this case:
+        \begin{align*}
+            Z = \int \prod_d \dd \bm s_i \exp \left( K \sum_{\mean{ij}}\bm s_i \cdot \bm s_j \right) \delta(\bm s_i^2-1)
+        \end{align*}
+        the product of the spins are $\bm s_i \cdot \bm s_j = \cos (\theta_i - \theta_j)$ and the integral element is nothing but the angle, 
+        \begin{align*}
+            Z = \int \prod_i \dd \theta_i \exp \left(K \sum_{\mean{ij}} \cos (\theta_i - \theta_j)\right)
+        \end{align*}
+        \item By taylor expansion at small $x$, 
+        \begin{align*}
+            \cos(x) \simeq 1 - \frac{1}{2} x^2,
+        \end{align*}
+        then the Hamiltonian is 
+        \begin{align*}
+           - \beta \H = K \sum_{\mean{ij}} \left[ 1 - \frac{1}{2} \left(\theta_i - \theta_j\right)^2 \right] = K N_b - \frac{K}{2} \sum_{\mean{ij}} (\theta_i - \theta_j)^2
+        \end{align*}
+        \item By periodic boundary conditions we can know: 
+        \begin{align*}
+            \bm{s}_{j+L} = \bm{s}_j \;\implies \; \theta_{j + L} = \theta_j
+        \end{align*}
+        the discrete fourier transformation gives 
+        \begin{align*}
+            \theta(q) = \frac{1}{\sqrt{L}} \sum_j \theta_j \ee^{- \ii pj}, \quad \theta_j = \frac{1}{\sqrt{L}} \sum_q \theta(q) \ee^{\ii pj}
+        \end{align*}
+        by PBC: 
+        \begin{align*}
+            \theta_{j + L} = \theta_j &\implies \sum_q \theta(q) \ee^{\ii p (j+L)} = \sum_q \theta(q) \ee^{\ii p j} \\
+            &\implies \ee^{\ii p L} = 1, \implies pL = 2 n \pi, n \in \mathbb{N}
+        \end{align*}
+        s.t. the difference of two angle of nearest neighbour is 
+        \begin{align*}
+            \theta_j - \theta_{j-1} = \frac{1}{\sqrt{L}}\sum_q \theta(q) \ee^{\ii qj}(1- \ee^{- \ii q})
+        \end{align*}
+        Then the Hamiltonian is: 
+        \begin{align*}
+            - \beta \H &= K N_b - \frac{K}{2L}  \sum_{q} \sum_{q'} \theta(q) \theta(q') \sum_j \ee^{\ii(q+q')j} (1- \ee^{-\ii q}) (1-\ee^{-\ii q'}) \\
+            &= K N_b - \frac{K}{2L} \sum_q \sum_{q'} \theta(q) \theta(q') \left( 1 + \ee^{- \ii(q+q')} - \ee^{- \ii q} - \ee^{- \ii q'} \right) L \delta_{q,-q'} \\
+            &= K N_b - \frac{K}{2} \sum_q \abs{\theta(a)}^2 (1-\ee^{-\ii q})(1- \ee^{\ii q}) \\
+            &=K N_b - \frac{K}{2} \sum_q \abs{\theta(a)}^2 (2 - \ee^{- \ii q} - \ee^{\ii q}) \\
+            &= K N_b - \frac{K}{2} \sum_q \abs{\theta(a)}^2 \left( 2 - 2 \cos q \right) \\
+            &= K N_b - K \sum_q \abs{\theta(a)}^2 \left(1- \cos q\right)
+        \end{align*}
+        The quadratic form of the Hamiltonian:
+        \begin{align*}
+            - \beta \H = K N_b - \sum_q K_q \abs{\theta(q)}^2
+        \end{align*}
+        thus the eigenvalues $K_q$ is 
+        \begin{align*}
+            K_q = K (1- \cos q)
+        \end{align*}
     \end{enumerate}
 \end{solution}
 
